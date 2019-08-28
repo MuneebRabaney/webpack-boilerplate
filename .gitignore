@@ -1,0 +1,12 @@
+# node modules
+node_modules/
+
+# misc
+.DS_Store
+
+
+# environment
+.env
+
+# build
+dist/
