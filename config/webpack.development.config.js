@@ -10,9 +10,11 @@ const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 
 module.exports = (env, argv) => {
   
+  console.log(`=============================================`);
   console.log(`> ${env} env...`);
   console.log(`=============================================`);
-  console.log(`> ${argv} mode...`);
+  console.log(`> ${argv.mode} mode...`);
+  console.log(`=============================================`);
 
   const { 
     PLATFORM, VERSION, 
@@ -69,7 +71,7 @@ module.exports = (env, argv) => {
     styles: {
       test: /\.(css|scss|sass)$/,
       use: [
-        PLATFORM === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
+        argv.mode === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
         'css-loader',
         'sass-loader'
       ]
@@ -107,7 +109,7 @@ module.exports = (env, argv) => {
     }),
   ];
 
-  if (PLATFORM === 'production') {
+  if (argv.mode === 'production') {
     const CleanWebpackPlugin = new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['**/*', '!static/**', '!.htaccess'],
     });

@@ -1,19 +1,19 @@
 {
-  "name": "bright-future-phase-2",
+  "name": "webpack-boilerplate",
   "version": "0.1.0",
-  "description": "Bright Future phase 2 wesite.",
-  "repository": "https://bitbucket.org/liquorice/unileverschoolsprogramme.co.za-phase2/src/master/",
+  "description": "Webpack and bable 7 boilerplate with react",
+  "repository": "https://github.com/MuneebRabaney/webpack-boilerplate",
   "main": "./src/index.js",
   "scripts": {
     "lint": "eslint",
     "pretty": "prettier --write \"src/**/*.{jsx,js}\"",
     "storybook": "start-storybook -p 9090 -c .storybook",
     "server": "json-server --watch json-server/db.json --port 3333",
-    "start": "webpack-dev-server --config ./config/webpack.development.config.js --colors --mode development ",
-    "build:staging": "webpack --mode production --config ./config/webpack.production.config.js --progress --colors",
-    "build:production": "webpack --mode production --config ./config/webpack.production.config.js --progress --colors"
+    "start": "webpack-dev-server --config ./config/webpack.development.config.js --colors --mode=development ",
+    "build:staging": "webpack --mode=production --config ./config/webpack.production.config.js --progress --colors",
+    "build:production": "webpack --mode=production --config ./config/webpack.production.config.js --progress --colors"
   },
-  "keywords": [],
+  "keywords": ["react", "babel 7", "Webpack", "boilderplate"],
   "author": "",
   "license": "ISC",
   "dependencies": {
