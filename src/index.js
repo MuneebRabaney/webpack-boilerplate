@@ -3,23 +3,19 @@ import 'regenerator-runtime/runtime';
 import 'custom-event-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import img from './static/images/header.jpg';
+import { Main } from './components/layout';
 import './static/styles/main.scss';
+import { Provider } from 'react-redux';
+import store from './store';
 
 const App = () => {
   return (
-    <div className="app">
-      <img 
-        alt="header"
-        src={img} className="app-header" 
-      />
-      <p>
-        We are a most promising species, Mr. Spock, as predators go. Did you know that? I frequently
-        have my doubts. I dont. Not any more. And maybe in a thousand years or so, we will be able
-        to prove it.
-      </p>
-      <p>- Captain Kirk</p>
-    </div>
+    <Provider store={store}>
+      <div className="app">hello</div>
+      {/* test for main layout */}
+      <Main />
+      {/* end test for main layout */}
+    </Provider>
   );
 };
 

@@ -13,12 +13,19 @@
     "build:staging": "webpack --mode=production --config ./config/webpack.production.config.js --progress --colors",
     "build:production": "webpack --mode=production --config ./config/webpack.production.config.js --progress --colors"
   },
-  "keywords": ["react", "babel 7", "Webpack", "boilderplate"],
+  "keywords": [
+    "react",
+    "babel 7",
+    "Webpack",
+    "boilderplate"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -54,6 +61,7 @@
     "regenerator-runtime": "^0.13.3",
     "sass-loader": "^7.3.1",
     "style-loader": "^1.0.0",
+    "styled-components": "^4.3.2",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^2.1.0",
     "webpack": "^4.39.3",
